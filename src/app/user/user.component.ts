@@ -13,4 +13,14 @@ const randomNumber = Math.floor(DUMMY_USERS.length * Math.random());
 
 export class UserComponent {
   selectedUser = DUMMY_USERS[randomNumber];
+
+  get imagePath() {
+    return 'assets/users/' + this.selectedUser.avatar;
+  }
+
+  onSelectUser() {
+    // console.log("Clicked! the user button :)");
+    const randomNumber = Math.floor(DUMMY_USERS.length * Math.random());
+    this.selectedUser = DUMMY_USERS[randomNumber];
+  }
 }
