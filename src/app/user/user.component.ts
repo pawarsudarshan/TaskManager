@@ -15,6 +15,7 @@ export class UserComponent {
   // @Input({ required: true }) name!: string;
 
   // instead of writing code for each of property of user, input user object
+  @Input({ required: true }) selected!: boolean;
   @Input({ required: true }) user !: User;
 
   @Output() select = new EventEmitter<string>();
